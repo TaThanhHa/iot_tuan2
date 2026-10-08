@@ -29,7 +29,7 @@ void loop()
     button.tick();
 }
 
-void btnHold()
+void btnDoublePush()
 {
     if (led_select == 1)
     {
@@ -57,7 +57,7 @@ void btnPush()
     }
 }
 
-void btnDoublePush()
+void btnHold()
 {
     if (led_select == 1)
     {

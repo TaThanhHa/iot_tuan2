@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell($pio = \"$env:USERPROFILE\\\\.platformio\\\\penv\\\\Scripts\\\\pio.exe\"; if \\(-not \\(Test-Path $pio\\)\\) { $pio = \"pio\" }; & $pio run | Select-Object -Last 15)"
+    ]
+  }
+}
