@@ -61,8 +61,9 @@ Có thể dùng dòng lệnh:
 pio run -e two_leds -t upload
 ```
 
-Tham khảo: https://docs.platformio.org/en/latest/projectconf/sections/env/options/build/build_src_filter.html
-           https://docs.platformio.org/en/latest/projectconf/sections/env/index.html
+Tham khảo: 
+- https://docs.platformio.org/en/latest/projectconf/sections/env/options/build/build_src_filter.html
+- https://docs.platformio.org/en/latest/projectconf/sections/env/index.html
 
 ## Thư viện sử dụng
 
