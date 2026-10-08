@@ -1,6 +1,6 @@
 # IoT Tuần 2 – Điều khiển LED bằng nút nhấn (ESP32-S3 + OneButton)
 
-Dự án PlatformIO gồm các bài tập điều khiển LED bằng nút nhấn, dùng thư viện [OneButton](https://github.com/mathertel/OneButton) và lớp `LED` (thư mục `lib/LED`). Tất cả các bài nằm chung trong một project. Mỗi bài là một **môi trường (env)** riêng trong `platformio.ini`, nên không cần copy code qua lại giữa các file.
+Dự án PlatformIO gồm các bài tập điều khiển LED bằng nút nhấn, dùng thư viện [OneButton](https://github.com/mathertel/OneButton) và thư viện `LED` (thư mục `lib/LED`) của thầy. Tất cả các bài nằm chung trong một project. Mỗi bài là một **môi trường (env)** riêng trong `platformio.ini`, nên không cần copy code qua lại giữa các file.
 
 ## ⚠️ Lưu ý về phần cứng
 
@@ -12,7 +12,7 @@ Dự án PlatformIO gồm các bài tập điều khiển LED bằng nút nhấn
 | Nút BOOT | GPIO0 | GPIO0 |
 | Cấu hình PIO | `board = esp32dev` | `board = esp32-s3-devkitc-1`, thêm cấu hình PSRAM/flash 16 MB |
 
-Vì LED built-in của S3 là LED RGB, em thay bằng **2 LED ngoài** cắm trên test board (GPIO4 và GPIO6). Cách chuyển sang board 30 chân có ở [cuối file](#chạy-trên-esp32-loại-30-chân).
+Vì LED built-in của S3 là LED RGB, em thay bằng **2 LED ngoài** cắm trên test board (GPIO4 và GPIO6)
 
 ## Cấu trúc dự án
 
@@ -22,7 +22,7 @@ iot_tuan2/
 ├── src/
 │   ├── blink.cpp        # Bài 1: LED nhấp nháy
 │   ├── doublePush.cpp   # Bài 2: 1 nút điều khiển 1 LED
-│   └── twoLed.cpp       # Bài 3: 1 nút điều khiển 2 LED (bài tập về nhà)
+│   └── twoLed.cpp       # Bài 3: 1 nút điều khiển 2 LED 
 └── platformio.ini       # Mỗi bài = 1 env
 ```
 
