@@ -25,20 +25,20 @@ Mỗi env dùng `build_src_filter` để chỉ biên dịch đúng file của n�
 
 | Env | File | Chân sử dụng |
 |---|---|---|
-| `blink` | `blink.cpp` | LED: GPIO4 |
-| `double_push` | `doublePush.cpp` | LED: GPIO4, nút: GPIO0 (nút BOOT trên board) |
-| `two_leds` | `twoLeds.cpp` | LED1: GPIO4, LED2: GPIO6, nút: GPIO5 |
+| blink | blink.cpp | LED: GPIO4 |
+| double_push | doublePush.cpp | LED: GPIO4, nút: GPIO0 (nút BOOT trên board) |
+| two_leds | twoLeds.cpp | LED1: GPIO4, LED2: GPIO6, nút: GPIO5 |
 
 ## Chức năng
 
-## `blink`
+## blink
 LED nhấp nháy với chu kỳ 500 ms.
 
-## `double_push`
+## double_push
 - **Single click:** bật/tắt LED
 - **Double click:** LED nhấp nháy 200 ms
 
-## `two_leds`
+## two_leds
 Một nút nhấn điều khiển hai LED:
 
 | Thao tác | Chức năng |
