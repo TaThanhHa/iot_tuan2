@@ -1,11 +1,11 @@
 # Điều khiển LED bằng nút nhấn – ESP32-S3 + OneButton
 
-Dự án PlatformIO gồm các ví dụ điều khiển LED bằng nút nhấn, dùng thư viện [OneButton](https://github.com/mathertel/OneButton) và lớp `LED` (thư mục `lib/LED`). Mỗi ví dụ là một **môi trường (env)** riêng trong `platformio.ini`, nên chỉ cần chọn env là chạy được, không phải sửa code.
+Dự án PlatformIO gồm các ví dụ điều khiển LED bằng nút nhấn, dùng thư viện [OneButton](https://github.com/mathertel/OneButton) và thư viện `LED` (thư mục `lib/LED`). Mỗi ví dụ là một **môi trường (env)** riêng trong `platformio.ini`, nên chỉ cần chọn env là chạy được, không phải sửa code.
 
 ## Phần cứng
 
 - Board: **ESP32-S3 DevKitC-1 N16R8** (16 MB flash, 8 MB PSRAM)
-- 2 LED, 2 điện trở 220–330 Ω
+- 2 LED, 2 điện trở 1k Ω
 - 1 nút nhấn
 - Test board, dây cắm
 
@@ -49,29 +49,10 @@ Một nút nhấn điều khiển hai LED:
 
 Khi khởi động, chương trình chọn LED1 và LED1 sáng. Đang nhấp nháy mà single click thì LED dừng nhấp nháy và tắt.
 
-## Sơ đồ nối dây (`two_leds`)
-
-```
-GPIO4 ──[220Ω]──▶|── GND     (LED1)
-GPIO6 ──[220Ω]──▶|── GND     (LED2)
-GPIO5 ──[ nút nhấn ]── GND
-```
-
-- LED tích cực mức cao (`LED_ACT=HIGH`): chân dài (+) nối về phía GPIO qua điện trở, chân ngắn (−) nối GND.
-- Nút nhấn tích cực mức thấp (`BTN_ACT=LOW`): một đầu nối GPIO, một đầu nối GND. OneButton tự bật điện trở kéo lên nội nên không cần điện trở ngoài.
-
-Muốn đổi chân, sửa các giá trị `-DLED_PIN...` và `-DBTN_PIN` trong env tương ứng ở `platformio.ini`.
-
 ## Cách chạy
 
-1. Cài VS Code và extension **PlatformIO IDE**.
-2. Clone dự án:
-   ```bash
-   git clone https://github.com/TaThanhHa/iot_tuan2.git
-   ```
-3. Mở thư mục bằng VS Code.
-4. Ở thanh trạng thái phía dưới, bấm vào ô chọn môi trường (mặc định hiện `Default (iot_tuan2)`), rồi chọn env cần chạy, ví dụ `env:two_leds`.
-5. Bấm **Upload** (→). PlatformIO tự tải thư viện OneButton.
+1. Ở thanh trạng thái phía dưới, bấm vào ô chọn môi trường (mặc định hiện `Default (iot_tuan2)`), rồi chọn env cần chạy, ví dụ `env:two_leds`.
+2. Bấm **Upload** (→). PlatformIO tự tải thư viện OneButton.
 
 > Nếu để `Default`, PlatformIO sẽ build và nạp **lần lượt tất cả env**, và board sẽ chạy env nạp cuối cùng. Vì vậy cần chọn đúng env trước khi nạp.
 
