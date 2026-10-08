@@ -31,14 +31,14 @@ Mỗi env dùng `build_src_filter` để chỉ biên dịch đúng file của n�
 
 ## Chức năng
 
-### `blink`
+## `blink`
 LED nhấp nháy với chu kỳ 500 ms.
 
-### `double_push`
+## `double_push`
 - **Single click:** bật/tắt LED
 - **Double click:** LED nhấp nháy 200 ms
 
-### `two_leds`
+## `two_leds`
 Một nút nhấn điều khiển hai LED:
 
 | Thao tác | Chức năng |
@@ -52,7 +52,7 @@ Khi khởi động, chương trình chọn LED1 và LED1 sáng. Đang nhấp nh�
 ## Cách chạy
 
 1. Ở thanh trạng thái phía dưới, bấm vào ô chọn môi trường (mặc định hiện `Default (iot_tuan2)`), rồi chọn env cần chạy, ví dụ `env:two_leds`.
-2. Bấm **Upload** (→). PlatformIO tự tải thư viện OneButton.
+2. Bấm **Upload** (→).
 
 > Nếu để `Default`, PlatformIO sẽ build và nạp **lần lượt tất cả env**, và board sẽ chạy env nạp cuối cùng. Vì vậy cần chọn đúng env trước khi nạp.
 
@@ -60,6 +60,9 @@ Có thể dùng dòng lệnh:
 ```bash
 pio run -e two_leds -t upload
 ```
+
+Tham khảo: https://docs.platformio.org/en/latest/projectconf/sections/env/options/build/build_src_filter.html
+           https://docs.platformio.org/en/latest/projectconf/sections/env/index.html
 
 ## Thư viện sử dụng
 
